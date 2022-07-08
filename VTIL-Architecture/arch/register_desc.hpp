@@ -361,7 +361,7 @@ namespace vtil
 		{
 #if _M_X64 || __x86_64__
 		    constexpr auto architecture = architecture_amd64;
-			auto [base, offset, size] = amd64::registers.resolve_mapping( value );
+			auto [base, offset, size] = x86::registers.resolve_mapping( value );
 			auto register_sp = X86_REG_RSP;
 #else
 			constexpr auto architecture = architecture_x86;
